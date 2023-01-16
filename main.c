@@ -12,17 +12,37 @@ Print back all the read info to the screen with proper format. The info should i
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SLNO 15.23
+#define SLNO 15
 
 int main()
 
 {
-    const int a[5];
+    const int ssn = 45769;
+    char init;
+    char name[11];
+    int age;
+    float height;
 
-    printf("enter your firstName, initial of your last name, age and height to proceed :");
+    printf("ENTER YOUR INITAL: \t");
+    scanf("%c", &init);
 
-    scanf("%a");
+    printf("ENTER YOUR NAME: \t");
+    scanf("%10s", name);
 
-    printf(" SLNO \t %6d \t", a);
+    printf("ENTER YOUR AGE: \t");
+    scanf("%d", &age);
+
+    printf("ENTER YOUR HEIGHT: \t");
+    scanf("%f", &height);
+
+
+    printf("YOUR SLNO: %d \n", SLNO);
+    printf("YOUR INITIAL: %c \n", init);
+    printf("YOUR NAME: %s \n", name);
+    printf("YOUR AGE: %d \n", age);
+    printf("YOUR HEIGHT: %f \n", height);
+    printf("YOUR SSN: %d \n", ssn);
+
+
     return 0;
 }
