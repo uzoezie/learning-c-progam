@@ -1,47 +1,35 @@
-/*
-Define a symbolic constant with a name "SLNO" and assign some values to it
-Define a constant which should store 5-digit SSN
-Promp the user to feed their first name, initial of his last name, age, and height
-
-Example: Hanoak S 23 6.2
-
-Print back all the read info to the screen with proper format. The info should include the SLNO and 5-digit SSN
-*/
-
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
-#define SLNO 15
 
 int main()
 
 {
-    const int ssn = 45769;
-    char init;
-    char name[11];
-    int age;
-    float height;
 
-    printf("ENTER YOUR INITAL: \t");
-    scanf("%c", &init);
+    int ch;
 
-    printf("ENTER YOUR NAME: \t");
-    scanf("%10s", name);
+    printf("Enter a character value here: \n");
+    printf("Enter: '1':BOY \t '2':MAN \t '3':OLD MAN \n");
+    printf("Enter: '4':GIRL \t '5':WOMAN \t '6':OLD WOMAN \n");
+    scanf("%d", &ch);
 
-    printf("ENTER YOUR AGE: \t");
-    scanf("%d", &age);
-
-    printf("ENTER YOUR HEIGHT: \t");
-    scanf("%f", &height);
-
-
-    printf("YOUR SLNO: %d \n", SLNO);
-    printf("YOUR INITIAL: %c \n", init);
-    printf("YOUR NAME: %s \n", name);
-    printf("YOUR AGE: %d \n", age);
-    printf("YOUR HEIGHT: %f \n", height);
-    printf("YOUR SSN: %d \n", ssn);
+    switch (ch)
+    {
+        case 1 : printf("Your gift is a TOY CAR \n");
+                            break;
+        case 2 : printf("Your gift is a HOUSE \n");
+                            break;
+        case 3 : printf("Your gift is a VACATION \n");
+                            break;
+        case 4 : printf("Your gift is a doll");
+                            break;
+        case 5 : printf("Your gift is a HAIR");
+                            break;
+        case 6 : printf("Your gift is PEDICURE");
+                            break;
+        default : printf("Try again next time");
+    }
 
 
     return 0;
