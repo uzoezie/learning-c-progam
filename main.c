@@ -1,60 +1,32 @@
 /*
-Write a C Program to do the following:
+Assignment
+Write a C program to do the following:
 
-1. Read 2 number from the keyboard
-2. Print the following:
-            1. Addition
-            2. Substraction
-            3. Division
-            4. Multiplication
-
-3. Scan the options, "1" for addition, "2" for substraction and so on ...
-
-4. Print the result of the options
-
+1. Read a number (integer) from the keyboard
+2. Calculate the factorial of the red number
+Example; 5 = 5!  = 5*4*3*2*1 = 120
+3. Print the calculated factorial value to the screen
 */
-
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
 
 
-int main()
+int main ()
 
 {
-    int a, b;
-    int ch;
+    int h;
+    int f = 1;
 
-    printf("Print any number \n");
-    scanf("%d", &a);    
+    printf("Write an integer number on the screen... \n");
+    scanf("%d", &h);
 
-    printf("Print a second number");
-    scanf("%d", &b);
+    for(int v=1; v<=h; v++)
+    {
+        f*=v;
+    }
 
-    printf("Here are the options below \n");
-    printf("1 = Addition \t \t 2 = Substraction \t \t 3 = Division \t \t 4 = Multiplication \t \n");
-    scanf("%d", &ch);
-
-switch (ch)
-{
-case 1: printf("Addition: %d", a + b);
-                    break;
-case 2: printf("Substraction: %d", a - b);
-                    break;
-case 3: if(b == 0)
-        {
-            printf("Nothing is divisible by 0");
-        }
-        else
-        {
-             printf("Division: %d", a / b);
-        }
-                    break;
-case 4: printf("Multiplication: %d", a * b);
-                    break;
-default:printf("This is different: %d", a * b + 40 + 36);
-                    break;
-}
+    printf("The factorial of %d is %d", h, f);
     return 0;
 }
