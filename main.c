@@ -3,14 +3,22 @@
 #include <conio.h>
 
 
+//Print Cprogramming... triangle
+
 int main ()
 
 {
-    char d = 'z';
+    char p[] = "Cprogramming";
 
-    printf("The ASCII Code of %c is %d\n", d, d);
-    printf("%c + %c = %d\n", d, d, d+d);
-    printf("%c * %c = %d\n", d, d, d*d);
+    for (int i=0; i<12; i++)
+    {
+        for (int j=0; j<i+1; j++)
+        {
+            printf("%c", p[j]);
+        }
+        printf("\n");
+
+    }
 
     return 0;
 }
