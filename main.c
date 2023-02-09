@@ -6,43 +6,31 @@
 
 
 
-void yike();
-void house(int);
-void street(char);
-int mainland(char);
+int house(char);
+int blue();
 
-int main ()
+int main()
 {
-        yike();
-        house(15);
-        street('z');
-        int v = mainland('h');
-        printf("the returned value is .... %d", v);
-        return 0;
+    int k = house('o');
+    int m = blue();
+    printf("the return value is %d\n", k);
+    printf("the return value is put in %c and %d\n", k, SOS);
+    printf("The return key for function blue() is SOS * 5 = %d stored in int m", m);
+
+    return 0;
 }
 
-void yike()
+int house(char m)
 {
-        printf("This is a NO ARGUMENT + NO RETURN value function...\n");
+    printf("the value is %c\n", m);
+    printf("and the ascii code of %c is = %d\n", m, m);
+
+    return m;
 }
 
-void house(int a)
+int blue()
 {
-    printf("the house number is %d\n", a);
-    printf("this is a WITH ARGUMENT + NO RETURN value function...\n");
-}
+    printf("This is a function blue()...\n");
 
-void street(char a)
-{
-    printf("this is a street address of %c\n", a);
-    printf("And the street has an ascii code of %d\n", a);
-    printf("these two above are also with argument + no return value function... %d\n", SOS);
-}
-
-int mainland(char a)
-{
-    printf("the character value of mainland is %c...\n", a);
-    printf("and the ascii code of mainland %c is %d\n", a, a);
-
-    return a+15;
+    return SOS * 5;
 }
