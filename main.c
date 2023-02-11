@@ -5,33 +5,25 @@
 #define SOS 985
 
 
-
-void add(int, int);
-float umbrella(int, int);
-
+int food(char, int, float, int);
 
 int main ()
 {
-    add(15, 30);
-    float c = umbrella(5, 6);
 
-    printf("return value of umbrella = %.2f\n", c);
+    int h = food('Z', 15, 18, 21);
+    printf("The returned value is = %d\n", h);
 
     return 0;
 }
 
-void add(int a, int b)
+int food(char a, int b, float h, int v)
 {
-    printf("the first value is %d\n", a);
-    printf("the second value is %d\n", b);
-    printf("the sum of %d + %d = %d\n", a,b, a+b);
-}
+    printf("The value of first char is = %c\n", a);
+    printf("The ascii code of the first char is = %d\n", a);
+    printf("The value of the first int is = %d\n", b);
+    printf("The value of the first float is = %.2f\n", h);
+    printf("The value of the second int is %d\n", v);
 
-float umbrella(int a, int b)
-{
-    printf("this is a function of umbrella ...%d\n", a);
-    printf("this is the second umbrella ...%d\n", b);
-    printf("umbrella... %d\n", a+b);
+    return v+h+b+a;
 
-    return a*b+SOS;
 }
