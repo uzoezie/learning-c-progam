@@ -6,31 +6,32 @@
 
 
 
-int house(char);
-int blue();
+void add(int, int);
+float umbrella(int, int);
 
-int main()
+
+int main ()
 {
-    int k = house('o');
-    int m = blue();
-    printf("the return value is %d\n", k);
-    printf("the return value is put in %c and %d\n", k, SOS);
-    printf("The return key for function blue() is SOS * 5 = %d stored in int m", m);
+    add(15, 30);
+    float c = umbrella(5, 6);
+
+    printf("return value of umbrella = %.2f\n", c);
 
     return 0;
 }
 
-int house(char m)
+void add(int a, int b)
 {
-    printf("the value is %c\n", m);
-    printf("and the ascii code of %c is = %d\n", m, m);
-
-    return m;
+    printf("the first value is %d\n", a);
+    printf("the second value is %d\n", b);
+    printf("the sum of %d + %d = %d\n", a,b, a+b);
 }
 
-int blue()
+float umbrella(int a, int b)
 {
-    printf("This is a function blue()...\n");
+    printf("this is a function of umbrella ...%d\n", a);
+    printf("this is the second umbrella ...%d\n", b);
+    printf("umbrella... %d\n", a+b);
 
-    return SOS * 5;
+    return a*b+SOS;
 }
