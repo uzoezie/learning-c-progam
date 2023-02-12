@@ -8,8 +8,12 @@ int fun(int);
 int main()
 {
 
-    int c = fun(9);
-    printf("The factorial of a number is: %d", c);
+    int c;
+
+    printf("Enter the number ....:\t");
+    scanf("%d", &c);
+
+    printf("The factorial of the number is: %d", fun(c));
 
     return 0;
 }
