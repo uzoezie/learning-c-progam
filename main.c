@@ -5,25 +5,38 @@
 #define SOS 985
 
 
-int food(char, int, float, int);
-
+float add(int, int);
+float sub(int, int);
 int main ()
 {
 
-    int h = food('Z', 15, 18, 21);
-    printf("The returned value is = %d\n", h);
+    int a,b;
+    float n,m;
+
+    printf("Enter the first number ...\t");
+    scanf("%d", &a);
+
+    printf("Now you can enter the second number...\t");
+    scanf("%d", &b);
+
+    n = add(a,b);
+    m = sub(a,b);
+
+    printf("The returned value is %d + %d multiply by 2 = %2.f\n", a,b,n);
+    printf("Here, the returned value is %d -%d divide by 2 = %.2f\n", b,a,m);
 
     return 0;
 }
 
-int food(char a, int b, float h, int v)
+float add(int a, int b)
 {
-    printf("The value of first char is = %c\n", a);
-    printf("The ascii code of the first char is = %d\n", a);
-    printf("The value of the first int is = %d\n", b);
-    printf("The value of the first float is = %.2f\n", h);
-    printf("The value of the second int is %d\n", v);
+    printf("addition of %d and %d = %d\n", a,b, a+b);
+    return a+b*2;
+}
 
-    return v+h+b+a;
 
+float sub(int a, int b)
+{
+    printf("subtraction of %d and %d = %d\n", b,a, b-a);
+    return b-a/2;
 }
