@@ -6,38 +6,24 @@
 
 
 
-float add(int, int);
-float sub(int, int);
+int fun(int);
 
 int main ()
 {
+    int n = fun(1);
 
-    int a,b;
-    float n;
-
-    printf("Please enter the first number...\t");
-    scanf("%d",  &a);
-
-    printf("Please also enter the second number...\t");
-    scanf("%d", &b);
-
-    n = add(a,b);
-
-    printf("Subtract the nested function of  (%d-%d)/2 is %.2f\n", a,b, n);
-
-
+    printf("The value of the recursive function is %d", n);
     return 0;
 }
 
-float add(int a, int b)
-{
-    printf("The addition of %d and %d = %d\n", a,b, a+b);
-
-    return sub(a,b);
-}
-
-float sub(int a, int b)
+int fun(int a)
 {
 
-    return (b-a)/2;
+    a++;
+
+    if(a == 5)
+    {
+        return a;
+    }
+    return fun(a);
 }
