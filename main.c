@@ -2,28 +2,23 @@
 #include <stdlib.h>
 #include <conio.h>
 
-#define SOS 985
-
 
 
 int fun(int);
-
-int main ()
+int main()
 {
-    int n = fun(1);
 
-    printf("The value of the recursive function is %d", n);
+    int c = fun(9);
+    printf("The factorial of a number is: %d", c);
+
     return 0;
 }
 
 int fun(int a)
 {
-
-    a++;
-
-    if(a == 5)
+    if(a == 1)
     {
         return a;
     }
-    return fun(a);
+    return a * fun(a-1);
 }
