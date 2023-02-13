@@ -4,25 +4,26 @@
 
 
 
-int fun(int);
+int fact(int);
+
 int main()
 {
+    int v;
 
-    int c;
+    printf("Enter an integer number...\t");
+    scanf("%d", &v);
 
-    printf("Enter the number ....:\t");
-    scanf("%d", &c);
-
-    printf("The factorial of the number is: %d", fun(c));
+    printf("The factorial of the number is %d", fact(v)); 
 
     return 0;
 }
 
-int fun(int a)
+int fact(int a)
 {
     if(a == 1)
     {
         return a;
     }
-    return a * fun(a-1);
+    return a * fact(a-1);
 }
+
