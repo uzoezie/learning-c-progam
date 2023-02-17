@@ -3,27 +3,20 @@
 #include <conio.h>
 
 
-
-int fact(int);
-
+void print_array(char a[]);
 int main()
 {
-    int v;
-
-    printf("Enter an integer number...\t");
-    scanf("%d", &v);
-
-    printf("The factorial of the number is %d", fact(v)); 
+    char k[4] = {'a', 'b', 'c', 'd'};
+    print_array(k);
 
     return 0;
 }
 
-int fact(int a)
+void print_array(char b[])
 {
-    if(a == 1)
+    for(int i=0; i<4; i++)
     {
-        return a;
+        printf("%c", b[i]);
     }
-    return a * fact(a-1);
 }
 
