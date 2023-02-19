@@ -7,21 +7,16 @@
 void fun();
 int main()
 {
-    extern int gb;
-    printf("gb in in main():...%d\n", gb);
+
     fun();
-    printf("gb after calling fun():...%d\n", gb);
-
-
+    fun();
     return 0;
 }
 
-int gb;
-
 void fun()
 {
-    printf("gb in in fun():...%d\n", gb);
-    gb = 2;
-    printf("gb in second fun():...%d\n", gb);
+    static int i;
 
+    printf("in fun ()...%d  \n", i);
+    printf("in fun ()...%d  \n", ++i);
 }
