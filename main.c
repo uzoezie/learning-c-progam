@@ -3,20 +3,25 @@
 #include <conio.h>
 
 
-void print_array(char a[]);
+
+void fun();
 int main()
 {
-    char k[4] = {'a', 'b', 'c', 'd'};
-    print_array(k);
+    extern int gb;
+    printf("gb in in main():...%d\n", gb);
+    fun();
+    printf("gb after calling fun():...%d\n", gb);
+
 
     return 0;
 }
 
-void print_array(char b[])
-{
-    for(int i=0; i<4; i++)
-    {
-        printf("%c", b[i]);
-    }
-}
+int gb;
 
+void fun()
+{
+    printf("gb in in fun():...%d\n", gb);
+    gb = 2;
+    printf("gb in second fun():...%d\n", gb);
+
+}
